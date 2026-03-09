@@ -45,8 +45,57 @@ output:
  * * * 
   * * 
    *
-'''
+
 n=int(input())
 for i in range(n,0,-1):
     print(" "*(n-i)+"* "*i)
-       
+    
+3.diamond
+n=4
+output:
+   *
+  * *
+ * * *  
+* * * *
+ * * *
+  * *
+   *
+
+n=int(input())
+for i in range(1,n+1):  
+    print(" "*(n-i)+"* "*i)
+for i in range(n-1,0,-1):
+    print(" "*(n-i)+"* "*i) 
+
+
+#number pyramid
+n=4
+output:
+   1
+  1 2
+ 1 2 3
+1 2 3 4
+
+n=int(input())
+for i in range(1,n+1):
+    print(" "*(n-i)+" ".join(str(j) for j in range(1,i+1))) 
+
+
+#Alphabet Pyramid
+n=4
+output:
+A
+B C 
+D E F 
+G H I J 
+'''
+
+n=int(input())
+count=0
+for i in range(1,n+1):
+    row=""
+    for j in range(i):
+        row+=chr(65+count)+" "
+        count+=1
+    print(row)
+    
